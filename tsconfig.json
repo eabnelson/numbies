@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "strict": true,
+    "rootDir": ".",
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "types": ["node", "react", "vite/client"],
+    "lib": ["dom", "esnext"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "types/**/*.d.ts"],
+  "exclude": [
+    "node_modules",
+    ".expo",
+    "**/test",
+    "**/dist",
+    "**/__tests__",
+    "examples"
+  ]
+}
