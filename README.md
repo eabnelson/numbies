@@ -2,6 +2,8 @@
 
 A better payments app.
 
+[Numbies.xyz](https://numbies.xyz) · [TestFlight](https://testflight.apple.com/join/A7Mw4Eg6)
+
 ![Numbies](https://numbies.xyz/og-image.png)
 
 Built with [One](https://onestack.dev/), [Tamagui](https://tamagui.dev/), [Privy](https://www.privy.io/), [Convex](https://www.convex.dev/), [Tempo](https://tempo.xyz/), and [Superset](https://www.superset.sh/).
