@@ -1,4 +1,11 @@
-import { ArrowUp, Camera, ChevronLeft, QrCode, X } from '@tamagui/lucide-icons'
+import {
+  ArrowUp,
+  Camera,
+  ChevronDown,
+  ChevronLeft,
+  QrCode,
+  X,
+} from '@tamagui/lucide-icons'
 import { useConvex, useMutation, useQuery } from 'convex/react'
 import * as ImagePicker from 'expo-image-picker'
 import { useCallback, useEffect, useRef, useState } from 'react'
@@ -250,6 +257,12 @@ export function UserDrawer({
   const handleLogout = () => {
     onOpenChange(false)
     logout()
+  }
+
+  const handleDownloadTestflight = () => {
+    if (Platform.OS === 'web') {
+      window.open('https://testflight.apple.com/join/A7Mw4Eg6', '_blank')
+    }
   }
 
   // Upload image blob to Convex
@@ -1177,6 +1190,36 @@ export function UserDrawer({
               </Text>
             </YStack>
           )}
+        </XStack>
+      )}
+
+      {!showEditInput && (
+        <XStack
+          items="center"
+          justify="space-between"
+          py="$3"
+          onPress={handleDownloadTestflight}
+          cursor="pointer"
+          pressStyle={{ opacity: 0.7 }}
+        >
+          <Text
+            fontSize="$7"
+            textTransform="uppercase"
+            fontWeight="900"
+            letterSpacing={3}
+          >
+            download testflight
+          </Text>
+          <YStack
+            bg="rgba(24, 143, 237, 0.3)"
+            px={7}
+            py={2}
+            style={{ borderRadius: 100 }}
+            items="center"
+            justify="center"
+          >
+            <ChevronDown size={22} color="$brandBlue" strokeWidth={4} />
+          </YStack>
         </XStack>
       )}
 
